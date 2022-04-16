@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<h1>Welcome to My Leaflet map. Move around by clicking and dragging. Zoom in by double clicking or using the provided zoom buttons</h1>
+<title>Leaflet Web Map</title>
+
+   <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+
+<style>
+#map {   
+    width: 1400px;
+    height:700px;
+}
+
+h1{
+ color:#0099FF;
+}
+</style>
+
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+<script>
+
+    var map = L.map('map',{
+    center: [40.6272, -74.0304], // coordantes set to Bayridge.
+    zoom: 15 // set zoom of map
+    });
+    
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+  var markerhstat = new L.marker([ 40.6366386,-74.0229627]); // HSTAT marker
+   var markerb4 = new L.marker([ 40.630641, -74.024689]); // B4 stop 75th and 4th
+   var markerRtrain = new L.marker([ 40.6349359,-74.0234975]); // R train station
+   /// Adding the markers above to map.
+   markerhstat.addTo(map);
+   markerb4.addTo(map);
+   markerRtrain.addTo(map);
+
+
+</script>
+
+</body>
+
+</html>
