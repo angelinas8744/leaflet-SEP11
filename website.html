@@ -3,7 +3,15 @@
 <html>
 
 <head>
-<h1>Welcome to My Leaflet map. Move around by clicking and dragging. Zoom in by double clicking or using the provided zoom buttons</h1>
+<h1>Welcome to My Leaflet map. Move around by clicking and dragging. Zoom in by double clicking or using the provided zoom buttons.</h1>
+<p> Navigation can be tricky. Especally when maps are becoming high tech, and you start to memorize directions less, and have computers do it for you. Here, You can use a basic map to navigate around. Here are some tips for getting to know your routes. Like everything in life, it takes practice.</p>
+<li> Find the easiest and most effective route </li>
+<li> Review it, from start to end, back and forth until you have it down. </li>
+<li> Slowly make changes in that route, such as turning down a differnt block. </li>
+<li> Find more routes. </li>
+<li> Study street signs and see its patterns, such as which directions the numbers increase or decrease. </li>
+<li> Repeat this method with different Locations around !</li>
+<br>
 <title>Leaflet Web Map</title>
 
    <link
@@ -20,12 +28,26 @@
     ></script>
 
 <style>
-#map {   
-    width: 1400px;
-    height:700px;
+#map {
+    width: 2530px;
+    height:950px;
+}
+
+body {
+background-color: #DBF9FC;
 }
 
 h1{
+ color: #0099FF;
+}
+
+p{
+ font-size: 25px;
+ color:#6a0dad;
+}
+
+li{
+ font-size: 25px;
  color:#0099FF;
 }
 </style>
@@ -42,7 +64,7 @@ h1{
     center: [40.6272, -74.0304], // coordantes set to Bayridge.
     zoom: 15 // set zoom of map
     });
-    
+
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
